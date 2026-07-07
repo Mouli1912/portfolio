@@ -1,0 +1,76 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: radial-gradient(circle at top, #1f1e2e 0%, #09090f 65%, #040407 100%);
+}
+
+.hero-section {
+  width: min(1100px, 100%);
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  background: rgba(7, 8, 16, 0.72);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.hero-copy {
+  z-index: 1;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: #ff9ffc;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  color: #f6f7ff;
+}
+
+.hero-text {
+  max-width: 520px;
+  margin: 0;
+  color: rgba(246, 247, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 320px;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255, 159, 252, 0.18), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-visual canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 1.4rem;
+  }
+
+  .hero-visual {
+    min-height: 260px;
+  }
+}
