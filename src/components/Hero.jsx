@@ -3,7 +3,7 @@
         <section>
             <h1>Hello there </h1>
             <h1>I'm Mouli  </h1>
-            <p>Frontend Developer </p>
+            <p> I'm a Frontend Developer </p>
         </section>
     );
  }
