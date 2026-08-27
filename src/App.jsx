@@ -168,7 +168,7 @@ function App() {
               }}
             >
               <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cyan-500/30 via-fuchsia-500/20 to-transparent blur-2xl" />
-              <AvatarScene />
+              <AvatarScene theme={theme} />
             </motion.div>
           </motion.div>
         </section>
