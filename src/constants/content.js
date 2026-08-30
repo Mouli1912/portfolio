@@ -3,6 +3,7 @@ export const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Journey', href: '#journey' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -30,6 +31,7 @@ export const projects = [
     image: '/project-portfolio.svg',
     live: 'https://mouli1912.github.io/portfolio/',
     github: 'https://github.com/Mouli1912/portfolio',
+    tech: ['React', 'Vite', 'Tailwind', 'Framer Motion'],
   },
   {
     title: 'Chat Application',
@@ -37,6 +39,7 @@ export const projects = [
     image: '/project-chat.svg',
     live: '#',
     github: 'https://github.com/Mouli1912',
+    tech: ['React', 'Node.js', 'Socket.io'],
   },
   {
     title: 'Weather App',
@@ -44,6 +47,7 @@ export const projects = [
     image: '/project-weather.svg',
     live: '#',
     github: 'https://github.com/Mouli1912',
+    tech: ['JavaScript', 'OpenWeather API', 'CSS'],
   },
   {
     title: 'Task Manager',
@@ -51,6 +55,7 @@ export const projects = [
     image: '/project-task.svg',
     live: '#',
     github: 'https://github.com/Mouli1912',
+    tech: ['React', 'LocalStorage', 'CSS'],
   },
   {
     title: 'E-commerce Website',
@@ -58,14 +63,43 @@ export const projects = [
     image: '/project-ecommerce.svg',
     live: '#',
     github: 'https://github.com/Mouli1912',
+    tech: ['React', 'Bootstrap', 'JavaScript'],
   },
 ];
 
+// Edit these dates and descriptions anytime to update the Journey section
 export const timeline = [
-  { year: '2024', title: 'B.Tech Computer Science Engineering', description: 'Focused on modern web systems, UI/UX, and growth-driven engineering.' },
-  { year: '2023', title: 'Open Source Contributor', description: 'Supported community-led projects and sharpened my collaboration workflow.' },
-  { year: '2022', title: 'React Projects', description: 'Built interactive dashboards and product experiences with a strong visual lens.' },
+  {
+    year: '2024',
+    title: 'Started My Development Journey',
+    description:
+      'Began learning HTML, CSS, and JavaScript. Built my first static websites and fell in love with frontend development.',
+  },
+  {
+    year: '2025',
+    title: 'Built Projects & Learned Modern Frontend',
+    description:
+      'Learned React, Tailwind CSS, and Framer Motion. Built multiple projects including portfolio, chat app, and weather dashboard.',
+  },
+  {
+    year: '2026',
+    title: 'Building Full-Stack & Preparing for Opportunities',
+    description:
+      'Expanding into Node.js, MongoDB, and Next.js. Preparing for internships and professional frontend development roles.',
+  },
 ];
+
+export const learningItems = [
+  { label: 'React', status: 'Proficient' },
+  { label: 'Next.js', status: 'Learning' },
+  { label: 'TypeScript', status: 'Learning' },
+  { label: 'Node.js', status: 'Learning' },
+  { label: 'MongoDB', status: 'Exploring' },
+  { label: 'Data Structures & Algorithms', status: 'Practicing' },
+];
+
+export const beyondCodeText =
+  "When I'm not coding, I enjoy gaming, exploring new technology, and experimenting with creative ideas. Gaming sharpens my problem-solving mindset and inspires the kind of immersive UI experiences I love building.";
 
 export const experiences = [
   { title: 'Frontend Development', description: 'Crafting vibrant, high-performance interfaces for startups and modern brands.' },

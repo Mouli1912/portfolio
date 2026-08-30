@@ -33,7 +33,16 @@ function ProjectCard({ project }) {
           <h3 className="text-xl font-bold text-[#1D1D1B] tracking-tight">{project.title}</h3>
           <p className="mt-2 text-sm leading-relaxed text-[#68645D]">{project.description}</p>
         </div>
-        <div className="flex flex-wrap gap-3 pt-2">
+        {project.tech && project.tech.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {project.tech.map((t) => (
+              <span key={t} className="rounded-full border border-[#DDD3C3] bg-[#EDE5D6] px-3 py-1 text-xs font-medium text-[#68645D]">
+                {t}
+              </span>
+            ))}
+          </div>
+        )}
+        <div className="flex flex-wrap gap-3 pt-1">
           <a
             href={project.live}
             className="rounded-full bg-[#1D1D1B] px-5 py-2 text-xs font-semibold text-[#F7F3EA] transition-all hover:bg-[#B58A55] hover:text-white shadow-sm hover:-translate-y-0.5"
