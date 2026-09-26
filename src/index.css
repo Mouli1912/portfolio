@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap');
+
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(248, 250, 252, 0.95);
+  background-color: #050816;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #050816;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.laptop-girl-scene {
+  position: relative;
+  isolation: isolate;
+  background: radial-gradient(circle at 50% 30%, rgba(34, 211, 238, 0.18), transparent 38%), #071326;
+}
+
+.laptop-girl-glow {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  top: 38px;
+  left: calc(50% - 120px);
+  border-radius: 50%;
+  background: rgba(34, 211, 238, 0.2);
+  filter: blur(42px);
+  animation: girl-glow 5s ease-in-out infinite;
+}
+
+.laptop-girl-desk {
+  position: absolute;
+  right: 8%;
+  bottom: 56px;
+  left: 8%;
+  height: 12px;
+  border-radius: 999px;
+  background: #183451;
+  box-shadow: 0 16px 0 -4px rgba(34, 211, 238, 0.22), 0 20px 32px rgba(0, 0, 0, 0.35);
+}
+
+.laptop-girl {
+  position: absolute;
+  width: 220px;
+  height: 320px;
+  bottom: 56px;
+  left: calc(50% - 110px);
+  animation: girl-float 4s ease-in-out infinite;
+}
+
+.laptop-girl-head {
+  position: absolute;
+  z-index: 3;
+  top: 56px;
+  left: 76px;
+  width: 72px;
+  height: 82px;
+  border-radius: 47% 47% 45% 45%;
+  background: #f3b38f;
+  transform: rotate(-5deg);
+}
+
+.laptop-girl-hair {
+  position: absolute;
+  z-index: 4;
+  top: 34px;
+  left: 63px;
+  width: 98px;
+  height: 125px;
+  border-radius: 52% 52% 38% 48%;
+  background: #272044;
+  transform: rotate(-8deg);
+  box-shadow: -18px 35px 0 -5px #272044, 35px 74px 0 -12px #272044;
+}
+
+.laptop-girl-eye { position: absolute; top: 38px; width: 6px; height: 8px; border-radius: 50%; background: #24182b; }
+.laptop-girl-eye-left { left: 20px; }
+.laptop-girl-eye-right { right: 19px; }
+.laptop-girl-smile { position: absolute; left: 29px; top: 55px; width: 15px; height: 8px; border-bottom: 2px solid #b35e70; border-radius: 50%; }
+.laptop-girl-neck { position: absolute; z-index: 2; top: 127px; left: 94px; width: 30px; height: 38px; background: #e8a47f; }
+.laptop-girl-body { position: absolute; z-index: 2; top: 144px; left: 48px; width: 132px; height: 145px; border-radius: 48% 48% 18% 18%; background: #ef6f61; transform: rotate(-3deg); box-shadow: inset 0 22px rgba(255, 255, 255, 0.1); }
+.laptop-girl-arm { position: absolute; z-index: 5; top: 190px; width: 24px; height: 112px; border-radius: 20px; background: #f3b38f; transform-origin: top center; }
+.laptop-girl-arm-left { left: 54px; transform: rotate(-51deg); }
+.laptop-girl-arm-right { left: 144px; transform: rotate(51deg); }
+.laptop { position: absolute; z-index: 6; top: 205px; left: 42px; width: 150px; height: 94px; transform: perspective(240px) rotateX(-8deg); }
+.laptop-screen { position: absolute; top: 0; left: 17px; width: 116px; height: 76px; border: 7px solid #b8e8ed; border-bottom-width: 5px; border-radius: 7px 7px 3px 3px; background: #10263e; box-shadow: 0 0 20px rgba(34, 211, 238, 0.32); }
+.laptop-screen span { display: grid; height: 100%; place-items: center; color: #65e6e1; font: 700 26px monospace; animation: code-blink 2.2s steps(2, end) infinite; }
+.laptop-base { position: absolute; bottom: 0; left: 0; width: 150px; height: 18px; border-radius: 4px 4px 14px 14px; background: #94bbc9; transform: skewX(-18deg); box-shadow: 0 8px 13px rgba(0, 0, 0, 0.3); }
+.laptop-girl-code { position: absolute; color: rgba(142, 245, 239, 0.7); font: 11px monospace; letter-spacing: 0.02em; animation: code-drift 4s ease-in-out infinite; }
+.laptop-girl-code-one { top: 84px; left: 8%; }
+.laptop-girl-code-two { right: 7%; bottom: 112px; animation-delay: -2s; }
+
+@keyframes girl-float { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-9px) rotate(1deg); } }
+@keyframes girl-glow { 0%, 100% { opacity: 0.65; transform: scale(0.94); } 50% { opacity: 1; transform: scale(1.08); } }
+@keyframes code-blink { 50% { opacity: 0.4; } }
+@keyframes code-drift { 0%, 100% { transform: translateY(0); opacity: 0.5; } 50% { transform: translateY(-8px); opacity: 1; } }
+
+h1, h2, h3, h4 {
+  font-family: 'Sora', sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: white;
+}
