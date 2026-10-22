@@ -624,8 +624,8 @@ function App() {
                   <div className="space-y-2">
                     <p>
                       <span className="font-semibold text-[#1D1D1B]">Email: </span>
-                      <a href="mailto:moulidhara19@gmail.com" className="font-semibold underline underline-offset-4 text-[#B58A55]">
-                        moulidhara19@gmail.com
+                      <a href="mailto:19moulidhara@gmail.com" className="font-semibold underline underline-offset-4 text-[#B58A55]">
+                        19moulidhara@gmail.com
                       </a>
                     </p>
                     <p>
