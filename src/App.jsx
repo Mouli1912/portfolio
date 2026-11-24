@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { send } from '@emailjs/browser';
 import Navbar from './components/Navbar';
 import ParticleField from './components/ParticleField';
 import SectionHeading from './components/SectionHeading';
@@ -89,13 +88,13 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setStatus('Sending...');
-    send('service_xxx', 'template_xxx', formData, 'public_key')
-      .then(() => {
-        setStatus('Thanks! Your message is on its way.');
-        setFormData({ name: '', email: '', message: '' });
-      })
-      .catch(() => setStatus('Something went wrong. Please try again.'));
+    const subject = encodeURIComponent(`Portfolio message from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    );
+    setStatus('Opening your email app...');
+    window.location.href = `mailto:19moulidhara@gmail.com?subject=${subject}&body=${body}`;
+    setFormData({ name: '', email: '', message: '' });
   };
 
   const surfaceClass = 'border-[#DDD3C3] bg-[#FFFDF8] shadow-[0_10px_30px_rgba(29,29,27,0.04)]';
@@ -200,13 +199,6 @@ function App() {
                 >
                   Contact Me
                 </a>
-                <a
-                  href="/Mouli-Resume.pdf"
-                  download
-                  className="rounded-full border border-[#DDD3C3] bg-[#FFFDF8] px-7 py-3.5 text-sm font-semibold text-[#1D1D1B] transition-all hover:border-[#B58A55] hover:bg-[#EDE5D6] hover:-translate-y-0.5"
-                >
-                  Download Resume
-                </a>
               </motion.div>
 
               <motion.div
@@ -232,6 +224,8 @@ function App() {
                   <a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
                     className="rounded-full border border-[#DDD3C3] bg-[#FFFDF8] p-3 text-[#68645D] transition-all hover:-translate-y-0.5 hover:border-[#B58A55] hover:text-[#B58A55]"
                   >
                     {social.label}
@@ -636,7 +630,7 @@ function App() {
                     </p>
                     <p>
                       <span className="font-semibold text-[#1D1D1B]">LinkedIn: </span>
-                      <a href="https://www.linkedin.com/" className="font-semibold underline underline-offset-4 text-[#B58A55]" target="_blank" rel="noreferrer">
+                      <a href="https://www.linkedin.com/in/mouli-dhara-322742367" className="font-semibold underline underline-offset-4 text-[#B58A55]" target="_blank" rel="noreferrer">
                         linkedin.com/in/mouli
                       </a>
                     </p>

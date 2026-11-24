@@ -2,7 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 function GitHubSection() {
-  const [profile, setProfile] = useState(null);
+  const [profile, setProfile] = useState({
+    login: 'Mouli1912',
+    followers: 0,
+    public_repos: 0,
+    bio: 'Building polished digital experiences with React, design systems, and thoughtful motion.',
+    html_url: 'https://github.com/Mouli1912',
+  });
   const [languages, setLanguages] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -10,8 +16,10 @@ function GitHubSection() {
     const fetchGitHubData = async () => {
       try {
         const userResponse = await fetch('https://api.github.com/users/Mouli1912');
+        if (!userResponse.ok) throw new Error(`GitHub profile request failed: ${userResponse.status}`);
         const userData = await userResponse.json();
         const reposResponse = await fetch('https://api.github.com/users/Mouli1912/repos?per_page=100');
+        if (!reposResponse.ok) throw new Error(`GitHub repositories request failed: ${reposResponse.status}`);
         const reposData = await reposResponse.json();
         const languageSet = [...new Set(reposData.map((repo) => repo.language).filter(Boolean))];
         setProfile(userData);

@@ -128,6 +128,5 @@ export const testimonials = [
 
 export const socialLinks = [
   { label: 'GitHub', href: 'https://github.com/Mouli1912' },
-  { label: 'LinkedIn', href: 'linkedin.com/in/mouli-dhara-322742367' },
-  { label: 'Dribbble', href: 'https://dribbble.com/' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mouli-dhara-322742367' },
 ];

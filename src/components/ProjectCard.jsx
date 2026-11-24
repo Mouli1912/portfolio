@@ -43,15 +43,21 @@ function ProjectCard({ project }) {
           </div>
         )}
         <div className="flex flex-wrap gap-3 pt-1">
-          <a
-            href={project.live}
-            className="rounded-full bg-[#1D1D1B] px-5 py-2 text-xs font-semibold text-[#F7F3EA] transition-all hover:bg-[#B58A55] hover:text-white shadow-sm hover:-translate-y-0.5"
-          >
-            Live Demo
-          </a>
+          {project.live && project.live !== '#' && (
+            <a
+              href={project.live}
+              className="rounded-full bg-[#1D1D1B] px-5 py-2 text-xs font-semibold text-[#F7F3EA] transition-all hover:bg-[#B58A55] hover:text-white shadow-sm hover:-translate-y-0.5"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live Demo
+            </a>
+          )}
           <a
             href={project.github}
             className="rounded-full border border-[#DDD3C3] bg-[#F7F3EA] px-5 py-2 text-xs font-semibold text-[#1D1D1B] transition-all hover:border-[#B58A55] hover:bg-[#EDE5D6] hover:-translate-y-0.5"
+            target="_blank"
+            rel="noreferrer"
           >
             GitHub
           </a>
