@@ -3,14 +3,14 @@
 @import 'tailwindcss';
 
 :root {
-  --color-bg: #F7F3EA;
-  --color-bg-secondary: #EDE5D6;
-  --color-surface: #FFFDF8;
-  --color-text: #1D1D1B;
-  --color-text-secondary: #68645D;
-  --color-accent: #B58A55;
-  --color-accent-light: #D6B98C;
-  --color-border: #DDD3C3;
+  --color-bg: #1B365D; /* Primary background */
+  --color-bg-secondary: #005A9C; /* Secondary background */
+  --color-surface: #60C1E5; /* Surface color */
+  --color-text: #A0E0EF; /* Primary text */
+  --color-text-secondary: #A0E0EF; /* Secondary text (using same for simplicity) */
+  --color-accent: #60C1E5; /* Accent color */
+  --color-accent-light: #A0E0EF; /* Light accent */
+  --color-border: #005A9C; /* Border color */
 
   color-scheme: light;
   font-family: 'Poppins', sans-serif;

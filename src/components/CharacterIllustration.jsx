@@ -126,7 +126,7 @@ function CharacterIllustration({
               : { opacity: 0.85, boxShadow: '0 12px_36px rgba(29,29,27,0.07), 0 2px 8px rgba(29,29,27,0.04), inset 0 1px 0 rgba(255,255,255,0.45)' }
           }
           transition={{ duration: 0.4 }}
-          className="absolute inset-0 rounded-[2rem] pointer-events-none"
+          className="absolute inset-0 rounded-4xl pointer-events-none"
           style={{
             background:
               'linear-gradient(135deg, rgba(255,253,248,0.72) 0%, rgba(237,229,214,0.48) 60%, rgba(247,243,234,0.35) 100%)',
@@ -148,7 +148,7 @@ function CharacterIllustration({
         <motion.div
           animate={isHovered ? { opacity: 0.9 } : { opacity: 0.55 }}
           transition={{ duration: 0.4 }}
-          className="absolute top-0 inset-x-0 h-2/5 rounded-t-[2rem] pointer-events-none"
+          className="absolute top-0 inset-x-0 h-2/5 rounded-t-4xl pointer-events-none"
           style={{
             background:
               'radial-gradient(ellipse at 50% 0%, rgba(214,185,140,0.35) 0%, transparent 70%)',
@@ -188,7 +188,7 @@ function CharacterIllustration({
 
       {/* ── Layer 3: External cast shadow below the card ── */}
       <div
-        className="absolute bottom-[-16px] left-1/2 -translate-x-1/2 pointer-events-none"
+        className="absolute -bottom-4 left-1/2 -translate-x-1/2 pointer-events-none"
         style={{
           width: '70%',
           height: '20px',
